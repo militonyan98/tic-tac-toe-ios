@@ -19,6 +19,12 @@
 		0F562F4B29FC0B5100ECA6E6 /* GameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F562F4A29FC0B5100ECA6E6 /* GameResult.swift */; };
 		0F562F4F29FC0BAD00ECA6E6 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F562F4E29FC0BAD00ECA6E6 /* Move.swift */; };
 		0F562F5229FC0C3500ECA6E6 /* BoardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F562F5129FC0C3500ECA6E6 /* BoardModel.swift */; };
+		0F562F542A02F74500ECA6E6 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F562F532A02F74500ECA6E6 /* GameView.swift */; };
+		0F562F562A02F77600ECA6E6 /* GameDifficultyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F562F552A02F77600ECA6E6 /* GameDifficultyView.swift */; };
+		0F562F582A02F7A600ECA6E6 /* GameTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F562F572A02F7A600ECA6E6 /* GameTypeView.swift */; };
+		0F562F5A2A02F7C500ECA6E6 /* GameSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F562F592A02F7C500ECA6E6 /* GameSettingsView.swift */; };
+		0F562F5C2A02F81D00ECA6E6 /* DifficultyLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F562F5B2A02F81D00ECA6E6 /* DifficultyLevel.swift */; };
+		0F562F5E2A02F83C00ECA6E6 /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F562F5D2A02F83C00ECA6E6 /* GameType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +41,12 @@
 		0F562F4A29FC0B5100ECA6E6 /* GameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResult.swift; sourceTree = "<group>"; };
 		0F562F4E29FC0BAD00ECA6E6 /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		0F562F5129FC0C3500ECA6E6 /* BoardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardModel.swift; sourceTree = "<group>"; };
+		0F562F532A02F74500ECA6E6 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		0F562F552A02F77600ECA6E6 /* GameDifficultyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDifficultyView.swift; sourceTree = "<group>"; };
+		0F562F572A02F7A600ECA6E6 /* GameTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTypeView.swift; sourceTree = "<group>"; };
+		0F562F592A02F7C500ECA6E6 /* GameSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettingsView.swift; sourceTree = "<group>"; };
+		0F562F5B2A02F81D00ECA6E6 /* DifficultyLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyLevel.swift; sourceTree = "<group>"; };
+		0F562F5D2A02F83C00ECA6E6 /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +101,8 @@
 			children = (
 				0F562F4429FC097600ECA6E6 /* Mark.swift */,
 				0F562F4A29FC0B5100ECA6E6 /* GameResult.swift */,
+				0F562F5B2A02F81D00ECA6E6 /* DifficultyLevel.swift */,
+				0F562F5D2A02F83C00ECA6E6 /* GameType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -101,6 +115,10 @@
 				0F562F3E29FC08C700ECA6E6 /* TitleView.swift */,
 				0F562F4229FC093A00ECA6E6 /* SquareView.swift */,
 				0F562F4029FC091700ECA6E6 /* ConnectView.swift */,
+				0F562F532A02F74500ECA6E6 /* GameView.swift */,
+				0F562F552A02F77600ECA6E6 /* GameDifficultyView.swift */,
+				0F562F572A02F7A600ECA6E6 /* GameTypeView.swift */,
+				0F562F592A02F7C500ECA6E6 /* GameSettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,10 +205,16 @@
 			files = (
 				0F562F4929FC0ABF00ECA6E6 /* BoardView.swift in Sources */,
 				0F562F4F29FC0BAD00ECA6E6 /* Move.swift in Sources */,
+				0F562F582A02F7A600ECA6E6 /* GameTypeView.swift in Sources */,
 				0F562F3329EC329200ECA6E6 /* ContentView.swift in Sources */,
+				0F562F562A02F77600ECA6E6 /* GameDifficultyView.swift in Sources */,
+				0F562F5E2A02F83C00ECA6E6 /* GameType.swift in Sources */,
 				0F562F4329FC093A00ECA6E6 /* SquareView.swift in Sources */,
+				0F562F5C2A02F81D00ECA6E6 /* DifficultyLevel.swift in Sources */,
 				0F562F4529FC097600ECA6E6 /* Mark.swift in Sources */,
+				0F562F542A02F74500ECA6E6 /* GameView.swift in Sources */,
 				0F562F4B29FC0B5100ECA6E6 /* GameResult.swift in Sources */,
+				0F562F5A2A02F7C500ECA6E6 /* GameSettingsView.swift in Sources */,
 				0F562F4129FC091700ECA6E6 /* ConnectView.swift in Sources */,
 				0F562F3129EC329200ECA6E6 /* Tic_Tac_ToeApp.swift in Sources */,
 				0F562F5229FC0C3500ECA6E6 /* BoardModel.swift in Sources */,

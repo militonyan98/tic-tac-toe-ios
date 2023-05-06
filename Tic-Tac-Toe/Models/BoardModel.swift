@@ -46,10 +46,9 @@ class BoardModel: ObservableObject {
     }
     
     
-    func findBestValue(for mark: Mark, isMax: Bool, depth: Int) -> Int {
+    func findBestValue(for mark: Mark, isMax: Bool, depth: Int, maxDepth: Int) -> Int {
         var bestValue = isMax ? -1000 : 1000
-        
-        if depth > 3 {
+        if depth > maxDepth {
             return bestValue
         }
         
@@ -58,7 +57,7 @@ class BoardModel: ObservableObject {
                 if marks[i][j] == .blank {
                     marks[i][j] = mark
                     
-                    let result = minmax(isMax: !isMax, depth: depth + 1);
+                    let result = minmax(isMax: !isMax, depth: depth + 1, maxDepth: maxDepth);
                     
                     if isMax {
                         bestValue = max(bestValue, result)
@@ -75,7 +74,7 @@ class BoardModel: ObservableObject {
     }
     
     
-    func minmax(isMax: Bool, depth: Int) -> Int {
+    func minmax(isMax: Bool, depth: Int, maxDepth: Int) -> Int {
         let score = -1 * evaluate()
         
         if score == 10 || score == -10 {
@@ -86,19 +85,25 @@ class BoardModel: ObservableObject {
             return 0
         }
         
-        return isMax ? findBestValue(for: .o, isMax: isMax, depth: depth) : findBestValue(for: .x, isMax: isMax, depth: depth)
+        return isMax ? findBestValue(for: .o, isMax: isMax, depth: depth, maxDepth: maxDepth) : findBestValue(for: .x, isMax: isMax, depth: depth, maxDepth: maxDepth)
     }
     
-    func findBestMove() -> Move {
+    func findBestMove(maxDepth: Int) -> Move {
         var bestValue = -1000
         let bestMove = Move(row: -1, col: -1)
         
-        for i in 0..<marks.count {
-            for j in 0..<marks.count {
+        let xStart = Int.random(in: 0...2)
+        let yStart = Int.random(in: 0...2)
+        
+        for x in xStart..<xStart + 3 {
+            for y in yStart..<yStart + 3 {
+                var i = x%3
+                var j = y%3
+                
                 if marks[i][j] == .blank {
                     marks[i][j] = .o
                     
-                    let moveValue = minmax(isMax: false, depth: 0)
+                    let moveValue = minmax(isMax: false, depth: 0, maxDepth: maxDepth)
                     
                     marks[i][j] = .blank
                     
@@ -117,9 +122,6 @@ class BoardModel: ObservableObject {
     }
     
     /// end ai part
-    
-    
-    
     
     func checkIfWins(_ mark: Mark) -> Bool {
         /// rows

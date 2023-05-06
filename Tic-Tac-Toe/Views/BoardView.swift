@@ -9,10 +9,22 @@ import SwiftUI
 
 struct BoardView: View {
     @ObservedObject var boardModel = BoardModel()
-    @State var xTurn = true
+    @State private var xTurn = true
     @State private var showAlert = false
     @State private var continueGame = true
     @State private var alertText = ""
+    @Binding var gameType: GameType?
+    @Binding var difficultyLevel: DifficultyLevel?
+    
+    var maxDepth: Int {
+        if difficultyLevel == .hard {
+            return 5
+        } else if difficultyLevel == .medium {
+            return 2
+        } else {
+            return 1
+        }
+    }
     
     var body: some View {
         HStack {
@@ -22,7 +34,7 @@ struct BoardView: View {
                         SquareView(value: boardModel.marks[x][y])
                             .onTapGesture {
                                 Task{
-                                    await setMark(x: x, y: y)
+                                    gameType == .twoPlayer ? await setMark2Player(x: x, y: y) : await setMark(x: x, y: y)
                                 }
                                 
                             }
@@ -67,7 +79,7 @@ struct BoardView: View {
         
         if continueGame {
             let findBestMoveTask = Task {
-                return boardModel.findBestMove()
+                return boardModel.findBestMove(maxDepth: maxDepth)
             }
             
             let bestMove = await findBestMoveTask.value;
@@ -79,7 +91,7 @@ struct BoardView: View {
         
     }
     
-    func setMark2Player(x: Int, y: Int) {
+    func setMark2Player(x: Int, y: Int) async {
         let moveSuccesful = boardModel.canSetMark(x: x, y: y, mark: xTurn ? Mark.x : Mark.o)
         
         if moveSuccesful {
@@ -97,7 +109,7 @@ struct BoardView: View {
             continueGame = false
             showAlert = true
             alertText = "O won!"
-        } else if gameState == 0 {
+        } else if gameState == 0 && !boardModel.isMovesLeft() {
             continueGame = false
             showAlert = true
             alertText = "Draw"
@@ -112,8 +124,8 @@ struct BoardView: View {
     }
 }
 
-struct BoardView_Previews: PreviewProvider {
-    static var previews: some View {
-        BoardView()
-    }
-}
+//struct BoardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        BoardView()
+//    }
+//}
