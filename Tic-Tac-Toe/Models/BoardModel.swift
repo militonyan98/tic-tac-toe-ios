@@ -18,8 +18,8 @@ class BoardModel: ObservableObject {
         
         return false
     }
-    /// ai part
     
+    /// ai part
     func isMovesLeft() -> Bool {
         for i in 0..<marks.count {
             for j in 0..<marks.count {
@@ -97,8 +97,8 @@ class BoardModel: ObservableObject {
         
         for x in xStart..<xStart + 3 {
             for y in yStart..<yStart + 3 {
-                var i = x%3
-                var j = y%3
+                let i = x%3
+                let j = y%3
                 
                 if marks[i][j] == .blank {
                     marks[i][j] = .o
@@ -116,12 +116,10 @@ class BoardModel: ObservableObject {
             }
         }
         
-        print(bestValue)
-        
         return bestMove
     }
-    
     /// end ai part
+    
     
     func checkIfWins(_ mark: Mark) -> Bool {
         /// rows

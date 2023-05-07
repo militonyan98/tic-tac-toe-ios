@@ -17,9 +17,12 @@ struct ContentView: View {
                 Spacer()
                 GameSettingsView()
                 Spacer()
+                //Spacer()
+                ConnectView()
                 Spacer()
             }
         }
+        .accentColor(.red)
     }
 }
 

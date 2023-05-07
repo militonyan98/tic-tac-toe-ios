@@ -15,7 +15,6 @@ struct GameSettingsView: View {
         
         if action == 2 {
             Spacer()
-            
             GameDifficultyView()
         }
     }

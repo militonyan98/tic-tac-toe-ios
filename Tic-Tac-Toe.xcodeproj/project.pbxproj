@@ -25,6 +25,9 @@
 		0F562F5A2A02F7C500ECA6E6 /* GameSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F562F592A02F7C500ECA6E6 /* GameSettingsView.swift */; };
 		0F562F5C2A02F81D00ECA6E6 /* DifficultyLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F562F5B2A02F81D00ECA6E6 /* DifficultyLevel.swift */; };
 		0F562F5E2A02F83C00ECA6E6 /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F562F5D2A02F83C00ECA6E6 /* GameType.swift */; };
+		0F562F602A083D5800ECA6E6 /* DifficultyLevelButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F562F5F2A083D5800ECA6E6 /* DifficultyLevelButtonView.swift */; };
+		0F562F622A0843CD00ECA6E6 /* GameTypeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F562F612A0843CD00ECA6E6 /* GameTypeButtonView.swift */; };
+		0F562F642A08443200ECA6E6 /* SettingsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F562F632A08443200ECA6E6 /* SettingsTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +50,9 @@
 		0F562F592A02F7C500ECA6E6 /* GameSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettingsView.swift; sourceTree = "<group>"; };
 		0F562F5B2A02F81D00ECA6E6 /* DifficultyLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyLevel.swift; sourceTree = "<group>"; };
 		0F562F5D2A02F83C00ECA6E6 /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
+		0F562F5F2A083D5800ECA6E6 /* DifficultyLevelButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyLevelButtonView.swift; sourceTree = "<group>"; };
+		0F562F612A0843CD00ECA6E6 /* GameTypeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTypeButtonView.swift; sourceTree = "<group>"; };
+		0F562F632A08443200ECA6E6 /* SettingsTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,14 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				0F562F3229EC329200ECA6E6 /* ContentView.swift */,
-				0F562F4829FC0ABF00ECA6E6 /* BoardView.swift */,
-				0F562F3E29FC08C700ECA6E6 /* TitleView.swift */,
-				0F562F4229FC093A00ECA6E6 /* SquareView.swift */,
-				0F562F4029FC091700ECA6E6 /* ConnectView.swift */,
-				0F562F532A02F74500ECA6E6 /* GameView.swift */,
-				0F562F552A02F77600ECA6E6 /* GameDifficultyView.swift */,
-				0F562F572A02F7A600ECA6E6 /* GameTypeView.swift */,
-				0F562F592A02F7C500ECA6E6 /* GameSettingsView.swift */,
+				0F562F692A084AFC00ECA6E6 /* GameViews */,
+				0F562F672A084A7200ECA6E6 /* SettingsViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -131,6 +131,39 @@
 				0F562F4629FC098A00ECA6E6 /* Enums */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0F562F672A084A7200ECA6E6 /* SettingsViews */ = {
+			isa = PBXGroup;
+			children = (
+				0F562F592A02F7C500ECA6E6 /* GameSettingsView.swift */,
+				0F562F552A02F77600ECA6E6 /* GameDifficultyView.swift */,
+				0F562F572A02F7A600ECA6E6 /* GameTypeView.swift */,
+				0F562F632A08443200ECA6E6 /* SettingsTextView.swift */,
+				0F562F682A084A9800ECA6E6 /* ButtonsViews */,
+			);
+			path = SettingsViews;
+			sourceTree = "<group>";
+		};
+		0F562F682A084A9800ECA6E6 /* ButtonsViews */ = {
+			isa = PBXGroup;
+			children = (
+				0F562F5F2A083D5800ECA6E6 /* DifficultyLevelButtonView.swift */,
+				0F562F612A0843CD00ECA6E6 /* GameTypeButtonView.swift */,
+			);
+			path = ButtonsViews;
+			sourceTree = "<group>";
+		};
+		0F562F692A084AFC00ECA6E6 /* GameViews */ = {
+			isa = PBXGroup;
+			children = (
+				0F562F4829FC0ABF00ECA6E6 /* BoardView.swift */,
+				0F562F3E29FC08C700ECA6E6 /* TitleView.swift */,
+				0F562F4229FC093A00ECA6E6 /* SquareView.swift */,
+				0F562F4029FC091700ECA6E6 /* ConnectView.swift */,
+				0F562F532A02F74500ECA6E6 /* GameView.swift */,
+			);
+			path = GameViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,10 +237,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F562F4929FC0ABF00ECA6E6 /* BoardView.swift in Sources */,
+				0F562F642A08443200ECA6E6 /* SettingsTextView.swift in Sources */,
 				0F562F4F29FC0BAD00ECA6E6 /* Move.swift in Sources */,
+				0F562F602A083D5800ECA6E6 /* DifficultyLevelButtonView.swift in Sources */,
 				0F562F582A02F7A600ECA6E6 /* GameTypeView.swift in Sources */,
 				0F562F3329EC329200ECA6E6 /* ContentView.swift in Sources */,
 				0F562F562A02F77600ECA6E6 /* GameDifficultyView.swift in Sources */,
+				0F562F622A0843CD00ECA6E6 /* GameTypeButtonView.swift in Sources */,
 				0F562F5E2A02F83C00ECA6E6 /* GameType.swift in Sources */,
 				0F562F4329FC093A00ECA6E6 /* SquareView.swift in Sources */,
 				0F562F5C2A02F81D00ECA6E6 /* DifficultyLevel.swift in Sources */,
@@ -353,8 +389,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -362,9 +398,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.herminemil.Tic-Tac-Toe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -382,8 +421,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -391,9 +430,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.herminemil.Tic-Tac-Toe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
