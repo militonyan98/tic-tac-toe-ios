@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="300" height="300" src="https://github.com/militonyan98/tic-tac-toe-ios/blob/main/icon.png?raw=true">
+  <img width="300" height="300" src="https://github.com/militonyan98/tic-tac-toe-ios/blob/master/icon.png?raw=true">
 </p>
 
 # TIC-TAC-TOE - iOS SwiftUI
@@ -31,12 +31,12 @@
 ## Screenshots
 <p align="center">
 
-<img width="25%" src="https://github.com/militonyan98/tic-tac-toe-ios/blob/main/Screenshots/1.png?raw=true">
+<img width="25%" src="https://github.com/militonyan98/tic-tac-toe-ios/blob/master/Screenshots/1.png?raw=true">
 
-<img width="25%" src="https://github.com/militonyan98/tic-tac-toe-ios/blob/main/Screenshots/2.png?raw=true">
+<img width="25%" src="https://github.com/militonyan98/tic-tac-toe-ios/blob/master/Screenshots/2.png?raw=true">
 
-<img width="25%" src="https://github.com/militonyan98/tic-tac-toe-ios/blob/main/Screenshots/3.png?raw=true">
+<img width="25%" src="https://github.com/militonyan98/tic-tac-toe-ios/blob/master/Screenshots/3.png?raw=true">
 
-<img width="25%" src="https://github.com/militonyan98/tic-tac-toe-ios/blob/main/Screenshots/4.png?raw=true">
+<img width="25%" src="https://github.com/militonyan98/tic-tac-toe-ios/blob/master/Screenshots/4.png?raw=true">
 
 </p>
