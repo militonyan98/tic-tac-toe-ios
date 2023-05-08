@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GameTypeButtonView: View {
+    @Environment(\.colorScheme) var colorScheme
     var text: String
     var givenAction: Int
     @Binding var action: Int?
@@ -24,7 +25,7 @@ struct GameTypeButtonView: View {
                 aiButtonTapped = ai
             }
             .frame(width: 80, height: 50)
-            .background(RoundedRectangle(cornerRadius: 10).fill((twoPlayerButtonTapped == twoPlayer && twoPlayer == true) || ((aiButtonTapped == ai && ai == true)) ? .red : .secondary.opacity(0.2)))
+            .background(RoundedRectangle(cornerRadius: 10).fill((twoPlayerButtonTapped == twoPlayer && twoPlayer == true) || ((aiButtonTapped == ai && ai == true)) ? .red : colorScheme == .light ? .secondary.opacity(0.2) : .white.opacity(0.2)))
     }
 }
 

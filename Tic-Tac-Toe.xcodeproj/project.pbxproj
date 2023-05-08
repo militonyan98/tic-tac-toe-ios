@@ -28,6 +28,7 @@
 		0F562F602A083D5800ECA6E6 /* DifficultyLevelButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F562F5F2A083D5800ECA6E6 /* DifficultyLevelButtonView.swift */; };
 		0F562F622A0843CD00ECA6E6 /* GameTypeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F562F612A0843CD00ECA6E6 /* GameTypeButtonView.swift */; };
 		0F562F642A08443200ECA6E6 /* SettingsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F562F632A08443200ECA6E6 /* SettingsTextView.swift */; };
+		0FC764822A0949C700099D85 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0FC764812A0949C700099D85 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		0F562F5F2A083D5800ECA6E6 /* DifficultyLevelButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyLevelButtonView.swift; sourceTree = "<group>"; };
 		0F562F612A0843CD00ECA6E6 /* GameTypeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTypeButtonView.swift; sourceTree = "<group>"; };
 		0F562F632A08443200ECA6E6 /* SettingsTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTextView.swift; sourceTree = "<group>"; };
+		0FC764812A0949C700099D85 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				0F562F2F29EC329200ECA6E6 /* Tic-Tac-Toe */,
+				0FC764812A0949C700099D85 /* README.md */,
 				0F562F2E29EC329200ECA6E6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FC764822A0949C700099D85 /* README.md in Resources */,
 				0F562F3829EC329300ECA6E6 /* Preview Assets.xcassets in Resources */,
 				0F562F3529EC329300ECA6E6 /* Assets.xcassets in Resources */,
 			);

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DifficultyLevelButtonView: View {
+    @Environment(\.colorScheme) var colorScheme
     var text: String
     var givenDifficultyLevel: DifficultyLevel
     @Binding var difficultyLevel: DifficultyLevel?
@@ -20,7 +21,7 @@ struct DifficultyLevelButtonView: View {
                 isActive = true
             }
             .frame(width: 80, height: 50)
-            .background(RoundedRectangle(cornerRadius: 10).fill(difficultyLevel == givenDifficultyLevel ? .red : .secondary.opacity(0.2)))
+            .background(RoundedRectangle(cornerRadius: 10).fill(difficultyLevel == givenDifficultyLevel ? .red : colorScheme == .light ? .secondary.opacity(0.2) : .white.opacity(0.2)))
     }
 }
 
